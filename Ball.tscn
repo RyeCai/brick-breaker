@@ -4,16 +4,18 @@
 [ext_resource type="Script" uid="uid://dj87yg8g4kwnk" path="res://Ball.cs" id="1_lww6v"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_lww6v"]
-radius = 27.166155
+radius = 26.82685
 
 [node name="Ball" type="RigidBody2D"]
 script = ExtResource("1_lww6v")
 metadata/_edit_group_ = true
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-scale = Vector2(0.19629325, 0.19775285)
+scale = Vector2(0.1891892, 0.1891892)
 texture = ExtResource("1_gk6bx")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 scale = Vector2(-0.5268846, -0.54139405)
 shape = SubResource("CircleShape2D_lww6v")
+
+[connection signal="body_entered" from="." to="." method="OnBodyEntered"]
